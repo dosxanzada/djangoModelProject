@@ -16,3 +16,10 @@ class Smartphone(models.Model):
 
     def __str__(self):
         return self.name
+        
+
+class Accessories(models.Model):
+    name = models.CharField(max_length=50)
+    description = models.TextField()
+    brandId = models.ForeignKey(Brand, on_delete=models.PROTECT)
+    images = models.ImageField(upload_to="images/")
