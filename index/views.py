@@ -2,11 +2,15 @@ from django.shortcuts import render
 from index.models import Brand, Smartphone
 
 def index(request):
-
+    heading = "Главная страница"
     all_brands = Brand.objects.all()
     all_smartphones = Smartphone.objects.all()
 
-    data = {"brands" : all_brands, "smartphones": all_smartphones}
+    data = {
+        "heading": heading,
+        "brands" : all_brands, 
+        "smartphones": all_smartphones
+        }
 
     return render(request, "index.html", context=data)
 
