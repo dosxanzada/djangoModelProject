@@ -18,9 +18,14 @@
 </head>
 
 <body>
-<h1>Hello wolrd</h1>
-<a href="/apple">Apple смартфондары</a>
-<hr>
+    <div class="container">
+        <h1>Hello wolrd</h1>
+        <div class="">
+            <a href="/apple">Apple смартфондары</a>
+            <a href="/about">Жоба туралы</a>
+        </div>
+    </div>
+    <hr>
 
     <div class="container">
         <div class="row">
@@ -46,18 +51,18 @@
         <div class="row">
             {% for smartphone in smartphones %}
 
-        <div class="card" style="width: 18rem;">
-            <img src="/media/{{ smartphone.images }}" class="card-img-top" alt="...">
-            <div class="card-body">
-                <h5 class="card-title">{{ smartphone.name }}</h5>
-                <p class="card-text">Брэнд: {{ smartphone.brandId }}</p>
-                <a href="#" class="btn btn-primary">Сатып алу</a>
+            <div class="card" style="width: 18rem;">
+                <img src="/media/{{ smartphone.images }}" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">{{ smartphone.name }}</h5>
+                    <p class="card-text">Брэнд: {{ smartphone.brandId }}</p>
+                    <a href="#" class="btn btn-primary">Сатып алу</a>
+                </div>
             </div>
+
+
+            {% endfor %}
         </div>
-
-
-    {% endfor %}
-    </div>
 
     </div>
 
