@@ -5,6 +5,7 @@ from index import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('apple', views.appl),
+    path('about', views.aboutPage),
     path('', views.index)
 ]
 

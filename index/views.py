@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from django.http import HttpResponse
 from index.models import Brand, Smartphone
 
 def index(request):
@@ -20,3 +21,7 @@ def appl(request):
 
     data = {"applesm": applesm}
     return render(request, "apple.html", context=data)
+
+
+def aboutPage(request):
+    return HttpResponse("Hello")
