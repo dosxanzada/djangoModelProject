@@ -12,16 +12,12 @@ def index(request):
         "brands" : all_brands, 
         "smartphones": all_smartphones
         }
-
     return render(request, "index.html", context=data)
 
 def appl(request):
-
     applesm = Smartphone.objects.filter(brandId=1)
-
     data = {"applesm": applesm}
     return render(request, "apple.html", context=data)
-
 
 def aboutPage(request):
     return HttpResponse("Hello")
